@@ -115,6 +115,156 @@
 
 6. DELETE DATABASE:
    ----------------
+
+
+
+
+*How to delete a database:
+ -------------------------
+
+>> drop database databasename;
+
+
+Eg:
+ >>create database test;
+   CREATE A DATABASE
+
+>>drop database test;
+DROP DATABASE
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+ 7. CREATING TABLE AND ADDING DATA:
+   -------------------------------
+
+
+>>create database databasename;
+Eg: >>create database student;
+      CREATE DATABASE
+
+
+*To Create a table:
+ ------------------
+  >>create table tablename(field1 datatype,field2 datatype,..........);
+
+
+Eg: create table student(name text,roll_no int,age int);
+    CREATE TABLE
+
+
+>>\d  ===>it will show the list of operations like(name\type\owner)here name=student,type=table,owner=postgres).
+
+
+
+
+*Adding data to the fields:
+ --------------------------
+
+
+>>INSERT INTO TABLENAME(table fields,.....) VALUES(value1,value2,.....)
+
+Eg:
+>>INSERT INTO student(name,roll_no,age) VALUES("siva",920,25);
+INSERT 0 1
+
+
+
+>>INSERT INTO student(name,roll_no,age) VALUES("Krishna",2770,24);
+INSERT 0 1
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+8.RETRIEVING DATA FROM DATABASE  AND DELETING CONTENTS FROM DATABASE:
+  -------------------------------------------------------------------
+
+
+
+
+
+*RETRIEVING DATA FROM DATABASE:
+ ---------------------------------
+
+>> SELECT * FROM TABLENAME;
+
+
+Eg:
+  >>SELECT * FROM STUDENT;
+
+o/p:
+ name roll_no age
+ siva  920     25
+ krishna 2770  24
+
+
+
+
+>>SELECT NAME FROM STUDENT;
+ o/p:
+name
+----
+siva
+krishna
+
+
+
+
+>>SELECT * FROM STUDENT WHERE age=24;
+ o/p:
+name roll_no age
+----------------
+krishna 2770 24
+
+
+
+
+
+
+*Deleting contents from a table:
+ ------------------------------
+
+>> TRUNCATE TABLE TABLENAME;
+
+
+Eg:
+>>TRUNCATE TABLE STUDENT;
+Truncate table
+
+
+>>select * from student;
+
+o/p:
+name roll_no age
+---------------
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+8. SETTING UP VIRTUALENV:
+   ---------------------
+
+
+
+
+
           
 
    
