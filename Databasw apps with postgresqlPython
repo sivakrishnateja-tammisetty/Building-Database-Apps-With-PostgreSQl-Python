@@ -1,0 +1,81 @@
+1 Intro to Data:
+   ------------
+
+*what is data?
+    Data is a collection of information.
+    The name 'Data' is derived from Datum(SINGLE PIECE OF INFORMATION).
+    Eg: person-> name,age,gender,DOB,Nationality,height( are data of the person).
+
+*various forms of data?
+  TEXT,NUMBERS,MEDIA,ETC.....
+
+  Eralier data was written and stored,but nowadays stored in laptop as bytes.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2 Intro to Database:
+   ------------------
+
+*what is a database?
+    Database is a organized collection of data stored in database in the form of tables(means by rows & columns).
+    It can be eaisly managed, accessed and updated.
+
+*Main purpose of Database:
+--------------------------
+    To operate a large amount of information by  Storing ,Reterving  and managing them.
+
+    Many Databases are available like:
+      .Mysql
+      .Oracle
+      .Postgresql
+      .MongoDB,...etc
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3 Into to postgresql:
+  --------------------
+
+
+
+*Types of Databases:
+  1.Hierarchical Databse
+  2.NoSQL Database
+  3.Object oriented Database
+  4.Relational Database
+  5.Network Databse
+
+*Relational database & object oriented Database are deal with postgreqsl.
+
+
+*About Relational Database:
+ -------------------------
+  *They are categorized by a set of tables.
+  *SQL(structure query language)act as the application interface.
+  *Easier to modify(Extending the Database & Joining the Databases).
+
+
+*What is postgresql?
+  .Object-oriented database + Relational Database
+  .Similar to relational Database.
+  .Object oriented Database ->Objects,classes & inheritance are supported.
+  .Open source
+  .Source code is available under postgresql License
+  .Building of commerical apps.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Installing Postgresql:
+-------------------------
+
+.type postgresql and download
+.search psql(p sqlshell) will open .
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+5. Creating a Database:
+   -------------------
