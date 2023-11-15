@@ -330,7 +330,8 @@ name roll_no age
       import psycopg2
       conn=psycopg2.connect(dbname="postgres",user="postgres",password="demo123",host="localhost",port="5433")
       cursor=conn.cursor()
-      cursor.execute('''create table tablename(field1 datatype,field2 datatype,....);)
+      #cursor.execute('''create table tablename(field1 datatype,field2 datatype,....);''')
+      cursor.execute('''create table employee(Name TEXT,Age INT);''')
       print("Table created successfully")
       conn.commit()
       conn.close()
@@ -346,8 +347,51 @@ name roll_no age
    *\d
 
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+13. INSERTING THE DATA USING PYTHON:
+    --------------------------------
+
+*(test.py):filename
+      import psycopg2
+      def table():
+         conn=psycopg2.connect(dbname="postgres",user="postgres",password="demo123",host="localhost",port="5433")
+         cursor=conn.cursor()
+         cursor.execute('''create table employee(Name TEXT,Age INT);''')
+         print("Table created successfully")
+         conn.commit()
+         conn.close()
+      def data():
+         conn=psycopg2.connect(dbname="postgres",user="postgres",password="demo123",host="localhost",port="5433")
+         cursor=conn.cursor()
+         cursor.execute('''INSERT INTO employee(Name,Age) values("siva",23);''')
+         print("Data added successfully")
+         conn.commit()
+         conn.close()
+
+      data()
+
+
+*run:open cmd
+   (env) C:\user\Desktop\visual_studio>python test.py
+      Data added successfully
+
+
+*To check whether table is created or not:
+   *open psql
+   *\d
+
+
+*postgres=# select * from employee
+
+   Name | Age
+   ----------
+   siva | 23
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
 
       
 
