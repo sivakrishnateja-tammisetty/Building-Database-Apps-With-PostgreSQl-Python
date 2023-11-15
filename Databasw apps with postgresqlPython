@@ -72,6 +72,11 @@
 
 .type postgresql and download
 .search psql(p sqlshell) will open .
+        server[localhost]
+        Database[postgres]
+        port[5433]
+        username[postgres]
+        password for user postgres:demo123
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -296,6 +301,55 @@ name roll_no age
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+11. CONNECTING TO THE POSTGRES DATABASE:
+    ------------------------------------
+
+   *To connect python with that postgres database,we have to import that psycopg2 package,which we was installed previously.
+      Here conn is an object.
+      tet.py:
+      import psycopg2
+      conn=psycopg2.connect(dbname="postgres",user="postgres",password="demo123",host="localhost",port="5433")
+      print("connected successfully")
+     
+
+   *To conform the connection:
+      open commond prompt
+         (env) C:\user\Desktop\visual_studio>python test.py
+
+
+    o/p:connected successfully
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+12. CREATING TABLE USING PYTHON:
+    ----------------------------
+*(test.py):filename
+      import psycopg2
+      conn=psycopg2.connect(dbname="postgres",user="postgres",password="demo123",host="localhost",port="5433")
+      cursor=conn.cursor()
+      cursor.execute('''create table tablename(field1 datatype,field2 datatype,....);)
+      print("Table created successfully")
+      conn.commit()
+      conn.close()
+
+*run:open cmd
+     (env) C:\user\Desktop\visual_studio>python test.py
+      Table created successfully
+
+
+
+*To check whether table is created or not:
+   *open psql
+   *\d
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+      
 
           
 
