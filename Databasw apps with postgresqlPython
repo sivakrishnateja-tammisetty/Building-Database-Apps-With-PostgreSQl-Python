@@ -393,7 +393,92 @@ name roll_no age
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
-      
+
+14. EXTRACTING THE DATA FROM THE DATABASE:
+   ---------------------------------------
+   *fetchone() ->is used to get data from the database.
+
+*(test.py):filename
+      import psycopg2
+      def table():
+         conn=psycopg2.connect(dbname="postgres",user="postgres",password="demo123",host="localhost",port="5433")
+         cursor=conn.cursor()
+         cursor.execute('''create table employee(Name TEXT,Age INT);''')
+         print("Table created successfully")
+         conn.commit()
+         conn.close()
+      def data():
+         conn=psycopg2.connect(dbname="postgres",user="postgres",password="demo123",host="localhost",port="5433")
+         cursor=conn.cursor()
+         cursor.execute('''INSERT INTO employee(Name,Age) values("siva",23);''')
+         print("Data added successfully")
+         conn.commit()
+         conn.close()
+
+      def extract():
+         conn=psycopg2.connect(dbname="postgres",user="postgres",password="demo123",host="localhost",port="5433")
+         cursor=conn.cursor()
+         cursor.execute('''SELECT * FROM EMPLOYEE''')
+         print(cursor.fetchone())
+         conn.commit()
+         conn.close()
+      extract()
+
+
+
+
+*run:open cmd
+   (env) C:\user\Desktop\visual_studio>python test.py
+      ('siva' 23)  ->should be in tuple
+
+
+
+Eg2:
+
+*(test.py):filename
+      import psycopg2
+      def table():
+         conn=psycopg2.connect(dbname="postgres",user="postgres",password="demo123",host="localhost",port="5433")
+         cursor=conn.cursor()
+         cursor.execute('''create table employee(Name TEXT,Age INT);''')
+         print("Table created successfully")
+         conn.commit()
+         conn.close()
+      def data():
+         conn=psycopg2.connect(dbname="postgres",user="postgres",password="demo123",host="localhost",port="5433")
+         cursor=conn.cursor()
+         cursor.execute('''INSERT INTO employee(Name,Age) values("siva",23);''')
+         print("Data added successfully")
+         conn.commit()
+         conn.close()
+
+      def extract():
+         conn=psycopg2.connect(dbname="postgres",user="postgres",password="demo123",host="localhost",port="5433")
+         cursor=conn.cursor()
+         cursor.execute('''SELECT * FROM EMPLOYEE''')
+         show=cursor.fetchone()
+         print(show[0])
+         conn.commit()
+         conn.close()
+      extract()
+
+
+
+
+
+*run:open cmd
+   (env) C:\user\Desktop\visual_studio>python test.py
+   siva
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
           
 
