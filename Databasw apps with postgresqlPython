@@ -472,11 +472,41 @@ Eg2:
 
 
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+15. ADDING THE INPUT FROM USER:
+    ----------------------------
+
+
+*(test.py):filename
+      import psycopg2
+      def table():
+         conn=psycopg2.connect(dbname="postgres",user="postgres",password="demo123",host="localhost",port="5433")
+         cursor=conn.cursor()
+         cursor.execute('''create table employee(Name TEXT,Age INT);''')
+         print("Table created successfully")
+         conn.commit()
+         conn.close()
+      def data():
+         conn=psycopg2.connect(dbname="postgres",user="postgres",password="demo123",host="localhost",port="5433")
+         cursor=conn.cursor()
+         name=input("Enter name:")
+         age=input("Enter age:")
+         query='''INSERT INTO employee(Name,Age) values(%s,%s);'''
+         cursor.execute(query,(name,age))
+         print("Data added successfully")
+         conn.commit()
+         conn.close()
 
 
 
 
+*run:open cmd
+   (env) C:\user\Desktop\visual_studio>python test.py
+      Enter name:siva
+      Enter age: 23
+      Data added successfully
 
 
 
