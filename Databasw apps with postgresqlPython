@@ -258,11 +258,43 @@ name roll_no age
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-8. SETTING UP VIRTUALENV:
+9. SETTING UP VIRTUALENV:
    ---------------------
 
+   step 1: visualstudiocode(type in chrome)
+   step 2: open first link
+   step 3: choose operating system(windows,linux,mac)
+   step 4:download
+   step 5: open vs code
+   step 6: open you created folder in vs code and write sample code
+   step 7: open command prompt(cmd) and navigate to the path(your created folder path).
+   step 8:type in cmd ( pip install virtualenv)
+   step 9:once virtualenv was installed, then create virtualenv like, type (virtualenv env).here env is my environment name.
+           so, environment was created inside the directory in vs code.
+   step 10: To active env :cd env
+   step 11: cd scripts
+   step 12: type:activate
+   step 13: To run python code,go back to vs code like, cd.. and cd..
+            Then run code: python filename.py
+
+   step 14: suppose you want to deactive virtualenv ,just type: deactivate.
 
 
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+10. INSTALLING PSYCOPG2:
+    --------------------
+
+   *psycog2 is a package.This package helps to communicate with python & postgres Database.
+    *To install:
+      * (env) user/krishna/Desktop/visual_studio>pip install psycog2==2.8.6  (Iam in environment path ).
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
           
